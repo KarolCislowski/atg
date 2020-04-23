@@ -16,7 +16,7 @@ export const CustomForm = ({ submitHandler }) => {
   }
 
   return (
-    <Form inline="true" className="justify-content-md-center">
+    <Form inline="true" className="justify-content-center">
       <Form.Group>
         <Form.Control placeholder="Choose a Game" maxLength="3" isInvalid={wrongInput} type="text" value={chosenGame} onChange={(e) => typeHandler(e)}></Form.Control>
         <Button type="submit" disabled={!typesOfGames.includes(chosenGame)} onClick={(e) => submitHandler(e, chosenGame)}>Search</Button>

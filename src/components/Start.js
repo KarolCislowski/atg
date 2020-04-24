@@ -6,15 +6,15 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import ListGroup from 'react-bootstrap/ListGroup'
 
-export const Start = ({ start, index }) => (
+export const Start = ({ start, index, game }) => (
   <Card>
-    <Accordion.Toggle as={Button} variant="outline" eventKey={index} block>
+    <Accordion.Toggle as={Button} variant="outline" eventKey={game + start + index} block>
       <Row>
         <Col>{start.number} {start.horse.name}</Col>
         <Col>{start.driver.firstName} {start.driver.lastName}</Col>
       </Row>
     </Accordion.Toggle>
-    <Accordion.Collapse eventKey={index}>
+    <Accordion.Collapse eventKey={game + start + index}>
       <Card.Body>
         <ListGroup variant="flush">
           <ListGroup.Item>Trainer: {start.horse.trainer.firstName} {start.horse.trainer.lastName}</ListGroup.Item>

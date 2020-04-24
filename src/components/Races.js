@@ -19,12 +19,13 @@ export const Races = ({ gameId, game }) => {
   return (
     <>
       {races && races.map((race) => (
-        <Jumbotron className={game}>
+        <Jumbotron key={race.number} className={game}>
           <h3>{game}-{race.number}</h3>
           <h5><Moment format="YYYY MMM DD HH:mm">{race.startTime}</Moment> {race.name}</h5>
           <Accordion>
             {race.starts.map((start, index) => (
-              <Start
+              <Start key={index}
+                game={game}
                 start={start}
                 index={index} />
             ))}

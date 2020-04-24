@@ -6,7 +6,7 @@
 2. Install required dependencies with npm: `npm install`
 3. Start the project: `npm start`
 
-Alternatively, if you don't want a new git repo on your account;
+or:
 
 1. Download & extract the code package from GitHub
 2. Open the directory in the terminal
